@@ -18,12 +18,15 @@ For this assessment, you will need to install the following:
 
 ## Development
 
-For local development, you will want to create a virtual environment and install the dependencies.
+For local development, you will want to clone the repository, create a virtual environment, install the dependencies, and then build and run the Docker image.
 
 ```bash
+git clone git@github.com:lambdapioneer/p79-sample.git
+cd p79-sample
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
+./run.sh
 ```
 
 You can run all tests with:
