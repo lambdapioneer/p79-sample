@@ -15,6 +15,12 @@ For this assessment, you will need to install the following:
 - Python 3.12+
 - [Docker](https://docs.docker.com/get-docker/)
 
+### Docker macOs Issue
+If you experience issues with MacOS identifying Docker Desktop as Malware, these resources helped me to resolve this:
+- https://docs.docker.com/desktop/cert-revoke-solution/
+- https://www.docker.com/blog/incident-update-docker-desktop-for-mac/
+- https://github.com/docker/for-mac/issues/7527
+
 
 ## Development
 
