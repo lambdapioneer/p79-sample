@@ -1,4 +1,5 @@
 import nacl.hash
+import nacl.encoding
 from enum import Enum
 
 #
@@ -21,7 +22,7 @@ class Digest:
 
     def __init__(
         self,
-        algorithm: str,
+        algorithm: DigestAlgorithm,
         output_len_bits: int = DEFAULT_OUTPUT_LEN_BITS,
     ):
         """

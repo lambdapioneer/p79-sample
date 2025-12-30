@@ -12,7 +12,7 @@ See the [Submitting your code](#submitting-your-code) section for more details.
 
 For this assessment, you will need to install the following:
 
-- Python 3.12+
+- [uv](https://docs.astral.sh/uv/getting-started/installation/)
 - [Docker](https://docs.docker.com/get-docker/)
 
 ### Docker macOs Issue
@@ -29,22 +29,20 @@ For local development, you will want to clone the repository, create a virtual e
 ```bash
 git clone git@github.com:lambdapioneer/p79-sample.git
 cd p79-sample
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
+uv sync
 ./run.sh
 ```
 
 You can run all tests with:
 
 ```bash
-python -m unittest discover -v -s tests
+uv run -m unittest
 ```
 
 You can check your types with:
 
 ```bash
-mypy .
+uvx ty check
 ```
 
 

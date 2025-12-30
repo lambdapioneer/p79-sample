@@ -1,16 +1,11 @@
-FROM python:3.12-slim
+FROM ghcr.io/astral-sh/uv:python3.12-trixie-slim
 WORKDIR /app
 
-# Install dependencies (do not forget to update requirements.txt if you install new packages)
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+# Install dependencies (doing this as a separate copy steps improves caching)
+COPY pyproject.toml .
+RUN uv sync
 
-# Copy over code and tests (adapt if you have a different structure)
-COPY hash/ hash/
-COPY tests/ tests/
+# Copy over remaining code, tests, and configurations
+COPY . .
 
-# Copy the test runner script
-COPY run_tests.sh .
-RUN chmod +x run_tests.sh
-
-ENTRYPOINT ["./run_tests.sh"]
+ENTRYPOINT ["/bin/bash", "-c", "uv run -m unittest"]
