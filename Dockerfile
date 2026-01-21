@@ -8,4 +8,7 @@ RUN uv sync
 # Copy over remaining code, tests, and configurations
 COPY . .
 
+# Perform type checking at build time
+RUN uv run ty check
+
 ENTRYPOINT ["/bin/bash", "-c", "uv run -m unittest"]
