@@ -15,8 +15,8 @@ You will need to install the following:
 - [uv](https://docs.astral.sh/uv/getting-started/installation/)
 - [Docker](https://docs.docker.com/get-docker/)
 
-### Docker macOS Issue
-If you experience issues with macOS identifying Docker Desktop as Malware, these resources helped me to resolve this:
+### Docker macOs Issue (2025)
+If you experience issues with MacOS identifying Docker Desktop as Malware, these resources helped me to resolve this:
 - https://docs.docker.com/desktop/cert-revoke-solution/
 - https://www.docker.com/blog/incident-update-docker-desktop-for-mac/
 - https://github.com/docker/for-mac/issues/7527
@@ -24,25 +24,27 @@ If you experience issues with macOS identifying Docker Desktop as Malware, these
 
 ## Development
 
-For local development, you will want to clone the repository, install the dependencies, and then build and run the Docker image.
+For local development, clone the repository and let `uv` create a virtual with the required dependencies.
+
 
 ```bash
 git clone git@github.com:lambdapioneer/p79-sample.git
 cd p79-sample
 uv sync
+```
+
+The `run.sh` script builds and runs the Docker image. It executes the type checker and linter during the build process and then runs the unit tests in a container.
+
+```bash
 ./run.sh
 ```
 
-You can run all tests with:
+You can run the type checker, linter, and the unit tests locally as well:
 
 ```bash
+uv run ty check
+uv run ruff check
 uv run -m unittest
-```
-
-You can check your types with:
-
-```bash
-uvx ty check
 ```
 
 
