@@ -33,16 +33,17 @@ cd p79-sample
 uv sync
 ```
 
-The `run.sh` script builds and runs the Docker image. It will execute the typec hecker during the build process and then run the unit tests in a container.
+The `run.sh` script builds and runs the Docker image. It executes the type checker and linter during the build process and then runs the unit tests in a container.
 
 ```bash
 ./run.sh
 ```
 
-You can run the type checker and the unit tests locally as well:
+You can run the type checker, linter, and the unit tests locally as well:
 
 ```bash
 uv run ty check
+uv run ruff check
 uv run -m unittest
 ```
 
