@@ -1,8 +1,8 @@
-# Assessment 0: sample project
+# Assignment 0: sample project
 
 This is a sample project to help you get started and verify your local setup.
 Note that in this example we provide you with a sample structure for the code and tests; we are not suggesting that these are necessarily a good example.
-In the real exercises, it will be your responsibility to design a good API and write suitable test cases.
+In the real assignments, it will be your responsibility to design a good API and write suitable test cases.
 
 However, we would generally expect that your submission contains a `README.md` file, a `Dockerfile`, and a `run.sh` script which builds and runs the Docker image.
 See the [Submitting your code](#submitting-your-code) section for more details.
@@ -10,13 +10,13 @@ See the [Submitting your code](#submitting-your-code) section for more details.
 
 ## Setup
 
-For this assessment, you will need to install the following:
+You will need to install the following:
 
 - [uv](https://docs.astral.sh/uv/getting-started/installation/)
 - [Docker](https://docs.docker.com/get-docker/)
 
-### Docker macOs Issue
-If you experience issues with MacOS identifying Docker Desktop as Malware, these resources helped me to resolve this:
+### Docker macOS Issue
+If you experience issues with macOS identifying Docker Desktop as Malware, these resources helped me to resolve this:
 - https://docs.docker.com/desktop/cert-revoke-solution/
 - https://www.docker.com/blog/incident-update-docker-desktop-for-mac/
 - https://github.com/docker/for-mac/issues/7527
@@ -24,7 +24,7 @@ If you experience issues with MacOS identifying Docker Desktop as Malware, these
 
 ## Development
 
-For local development, you will want to clone the repository, create a virtual environment, install the dependencies, and then build and run the Docker image.
+For local development, you will want to clone the repository, install the dependencies, and then build and run the Docker image.
 
 ```bash
 git clone git@github.com:lambdapioneer/p79-sample.git
@@ -67,11 +67,10 @@ test_sha256_default_length (test_diggest.TestDigest.test_sha256_default_length) 
 
 ## Submitting your code
 
-Once you completed the exercise, you will create a .zip file with the contents of your project.
-Make sure to exclude the `.venv` directory (and similar).
+Once you complete your implementation for an assignment, please submit it on Moodle as a .zip file with the contents of your project.
+Name the file `P79_{crsid}_A{nr}.zip`, where `crsid` is your Cambridge CRSID, and `nr` is the assignment number (1 to 4).
+For example, Daniel's submission for the first assignment would be named `P79_dh623_A1.zip`.
+Include your lab report as a PDF file named `P79_{crsid}_A{nr}.pdf`.
+
 All submissions should contain a `README.md` file, a `Dockerfile`, and a `run.sh` script which builds and runs the Docker image.
 It is a good idea to double check that your submission is self-contained by opening the zip file on a different machine and double checking that the `run.sh` script works.
-Include your lab report as a PDF file named `{csrid}_submission{nr}_report.pdf`.
-
-Name the file `{csrid}_submission{nr}.zip`.
-For example, Daniel's submission for the first exercise would be named `dh623_submission1.zip`.
